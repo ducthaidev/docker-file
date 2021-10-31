@@ -1,0 +1,11 @@
+apus/pgadmin4/
+apus/postgres-data/
+apus/rabbitmq-data/
+apus/redis-data/
+
+go_training/dbdata/
+
+mariadb-phpmyadmin-docker-compose/mariadb-phpmyadmin-docker-compose-data/
+
+postgresql/pgadmin4/
+postgresql/postgres/

@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  mariadb:
+    image: mariadb:10.3
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mariadb-phpmyadmin-docker-compose-data:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=thai1201
+      - MARIADB_DATABASE=doan
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 80:80
+    environment:
+      - PMA_ARBITRARY=1 
+      - PMA_HOST=mariadb
+    volumes:
+      - ./mariadb-phpmyadmin-docker-compose-data:/etc/phpmyadmin/config.user.inc.php
